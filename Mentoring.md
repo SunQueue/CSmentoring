@@ -1,7 +1,3 @@
-# test
-
-# test3
-
 # 09w05_MentoringLive
 
 - 부르트포스란 ? -> 다 해보는 것.   
