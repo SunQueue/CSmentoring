@@ -32,3 +32,15 @@
 ## 기타
 > 책 greedy 보고 오시길
 > 다음시간까지 주유소 문제까지 2문제 해올까요
+
+# 10W01  
+## BeforeMentoring  
+- \#11399...  
+> custom = [] 없애고 custom = list(map(int, input().split()))하니까 되네..?  
+>  custom = list(map(int, input().split())) << 이거 좀 안익숙함. 왜 이렇게 쓰는지 사실 잘 모르겠고 무슨 원리인지도 모르겟슴  
+- \#1931
+>
+
+## MentoringLive
+
+## AfterMentoring

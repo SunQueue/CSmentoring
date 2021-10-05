@@ -1,16 +1,20 @@
-flag = 0
 index = int(input())
 timelist = []
-for i in range(0, index):
-    timelist.append(input().split())
+for _ in range(index):
+    tmp = list(map(int, input().split()))
+    timelist.append(tmp)
+timelist.sort()
 
-for i in range (0, len(timelist)) :
-    tmp = 0
-    for j in range (i+1, len(timelist)) :
-        if(timelist[i][1] < timelist[j][0]):
-            tmp +=1
-            i = j
-            continue
-    if(tmp > flag) : flag = tmp
-print(flag)
+# 결국 읽는게 이중for문이랑 다를게 뭐지..?
 
+result = 0
+for i in range(0,len(timelist)) :
+    tmpcount = 1
+    endTime = int(timelist[i][1])
+    for j in  range(0,len(timelist)):
+        if endTime > timelist[j][1] : continue;
+        if endTime >= timelist[j][0] :
+            tmpcount +=1
+            endTime = timelist[j][1]
+    if(result < tmpcount) : result = tmpcount
+print(result)
