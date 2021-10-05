@@ -39,7 +39,27 @@
 > custom = [] 없애고 custom = list(map(int, input().split()))하니까 되네..?  
 >  custom = list(map(int, input().split())) << 이거 좀 안익숙함. 왜 이렇게 쓰는지 사실 잘 모르겠고 무슨 원리인지도 모르겟슴  
 - \#1931
->
+> - 초기의 생각은, 처음 한 쌍을 받아서, 그걸 기준으로 입력을 순회하면서 비교하는건데...  
+> - 이거를 앞 시간 sort, 뒷시간 sort해서 하는거같은데..  
+> - 일단 map써서 이차원 배열을 append하는 방식에 익숙해져야할 것 같고  
+> - 앞sort뒤sort할때 lambda를 많이 쓰네  
+>    > sort(key)에 lambda식을 쓸 수 있는데, list.sort(key = lambda x : (x[0], x[1])) 이면 x[0]을 기준, x[1]을 기준으로 정렬한다.   
+>    > 부호로 역순 정렬도 가능.  
+>    > ......그럼 sort와 lambda정렬의 차이점은 뭘까..
+
+> - 1차원 배열 입력 받기  
+> https://dailylifeofdeveloper.tistory.com/119 참고
+>    > 1. 띄어쓰기로 되어있는 경우 : arr = list(map(int, input(),split())  
+>    > 즉, split()을 통해 띄어쓰기를 기준으로 하여 입력을 받고, 이를 int로 바뀌서(map()) list형태로 저장
+>    > 2. Enter로 입력받는 경우 : 
+>    >    > arr = []  
+>    >    > for i in range (원소개수) :
+>    >    >     arr.append(int(input())  
+> - 2차원 배열 입력 받기 ; 위 링크의 132번 게시물 참고
+
+> - python은 for문에 증가변수를 두개씩 넣을 수 있다...!(원래 그랬던가)  
+>    > 예) for i, j in list : ...
+
 
 ## MentoringLive
 
