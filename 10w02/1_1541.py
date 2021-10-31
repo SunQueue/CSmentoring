@@ -13,10 +13,8 @@
 val = 0
 
 exp = list(input().split('-'))
-print(exp)
 
-for i in range(0, len(exp)):
-    exp[i] = list(map(int, exp[i].split('+')))
+for i in range(0, len(exp)): exp[i] = list(map(int, exp[i].split('+'))) :
     if i < 1 : 
         val += sum(exp[i])
     else :

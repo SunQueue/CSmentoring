@@ -7,25 +7,18 @@ print(board)
 
 tmpboard = board
 i=0; j=0; flag =0; result = 0;
-while(i<size) :
-    getchar = tmpboard[i][j]
-    if getchar == tmpboard[i+1][j] : 
-        flag +=1
-    else : # not same
-        if getchar == tmpboard[i+1][j+1] : 
-            tmpboard[i][j], tmpboard[i+1][j+1] = tmpboard[i+1][j+1] , tmpboard[i][j] #swap
-    i+=1
-    if result < flag : result = flag
-   
-while(j<size) : #col
-    getchar = tmpboard[i][j]
-    if getchar == tmpboard[i][j+1] : 
-        flag +=1
-    else : # not same
-        if getchar == tmpboard[i+1][j+1] : 
-            tmpboard[i][j], tmpboard[i+1][j+1] = tmpboard[i+1][j+1] , tmpboard[i][j] #swap
-    j+=1
+getchar = tmpboard[i][j]
 
-    if result < flag : result = flag
+for i, j in (size-1):
+    if getchar == tmpboard[i+1][j] : 
+        i+=1
+        getchar = tmpboard[i][j]
+        continue
+    if getchar == tmpboard[i][j+1] :
+        j+= 1
+        getchar = tmpboard[i][j]
+        continue
+    else
+
 
 print(result)
